@@ -1,12 +1,20 @@
-# selenium_lambdaTest_101
-Email id: tarunramireddy@gmail.com
-Full name: Ramireddy Tarun Venkata Reddy
-How to run:
-In the src code you can find package named TestScenarios and in that package there are four classes with three scenarios.
-scenario-3 consists of two classes because when it is applied in internetExplorer 11.0 in windows-10 it is showing different message apart from remaining three capabailities.
-There is pom.xml for maven dependencies because it is maven project.
-Though we can run each class as a java project separately.
-In gitpod inorder to obtain gitpod.yml we need to type command in the terminal- gp init
-After creating gitpod.yml file we need to add steps using before,init & command or else can directly open in IntellijIdea rather on browser.
-Thank you!
 
+Step 1: Configure your settings and required capabilites for your test
+For running a test we will need your username and access key to map with our cloud infrastrure.
+
+You can find the required credentials here : https://www.lambdatest.com/capabilities-generator
+
+Change the properties
+Add your Lambdatest username and access key in testcase.java
+
+String username = <YOUR LT_USERNAME> #Replace with your username
+String accessKey = <YOUR LT_ACCESS_KEY> #Replace with your access key
+Step 2: Running Tests
+We have preinstalled all the required environment for running the tests. You can now execute the tests in the console by the following commands:
+
+To run single test
+$ mvn test -P single
+To run parallel/multiple test
+$ mvn test -P parallel
+Step 3: Test Results
+Once you have completed running the tests you can find the results at : https://automation.lambdatest.com with the build name TestNG as a prefix.
